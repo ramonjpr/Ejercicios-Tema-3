@@ -1,0 +1,47 @@
+package com.company.RamonJ;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Persona Persona1 = new Persona();
+        Persona1.SetEdad(26);
+        Persona1.SetNombre("Ramon");
+        Persona1.SetTelefono(691332135);
+
+        Persona Persona2 = new Persona();
+        Persona2.SetEdad(22);
+        Persona2.SetNombre("Chan");
+        Persona2.SetTelefono(691331235);
+
+        System.out.println(Persona1.getNombre() + ", " + Persona1.getEdad() + " Tlf: " + Persona1.getTelefono());
+
+        System.out.println(Persona2.getNombre() + ", " + Persona2.getEdad() + " Tlf: " + Persona2.getTelefono());
+    }
+}
+
+class Persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
+
+    public void SetEdad (int edad){
+        this.edad = edad;
+    }
+    public int getEdad(){
+        return edad;
+    }
+
+    public void SetNombre (String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void SetTelefono (int telefono){
+        this.telefono = telefono;
+    }
+    public int getTelefono(){
+        return telefono;
+    }
+}
