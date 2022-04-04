@@ -1,0 +1,101 @@
+package com.company.RamonJ;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cliente Cliente1 = new Cliente();
+        Cliente1.SetEdad(30);
+        Cliente1.SetNombre("FER");
+        Cliente1.SetTelefono(633416892);
+        Cliente1.SetCredito((float) 6906.9);
+
+        System.out.println(Cliente1.getNombre() + ", " + Cliente1.getEdad() + " Tlf: " + Cliente1.getTelefono() +
+                ". Su credito es: " + Cliente1.getCredito() + "€");
+
+        Trabajador Trabajador1 = new Trabajador();
+        Trabajador1.SetEdad(35);
+        Trabajador1.SetNombre("Rodriguez, Jose");
+        Trabajador1.SetTelefono(691332135);
+        Trabajador1.SetSalario(1420.69);
+
+        System.out.println(Trabajador1.getNombre() + ". Tlf: " + Trabajador1.getTelefono() + ". Edad: " + Trabajador1.getEdad() +
+                ". Salario de: " + Trabajador1.getSalario() + "€");
+}
+}
+abstract class Persona {
+    int edad;
+    String nombre;
+    int telefono;
+
+    abstract public int getEdad();
+    abstract public void SetEdad(int edad);
+    abstract public String getNombre();
+    abstract public void SetNombre(String nombre);
+    abstract public int getTelefono();
+    abstract public void SetTelefono(int telefono);
+}
+
+class Cliente extends Persona {
+    private float credito;
+
+    public int getEdad(){
+        return this.edad;
+    }
+    public void SetEdad (int edad){
+        this.edad = edad;
+    }
+
+    public void SetNombre (String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void SetTelefono (int telefono){
+        this.telefono = telefono;
+    }
+    public int getTelefono(){
+        return telefono;
+    }
+
+    public void SetCredito (float credito){
+        this.credito = credito;
+    }
+    public float getCredito(){
+        return credito;
+    }
+
+}
+class Trabajador extends Persona {
+    private double salario;
+
+    public int getEdad(){
+        return this.edad;
+    }
+    public void SetEdad (int edad){
+        this.edad = edad;
+    }
+
+    public void SetNombre (String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void SetTelefono (int telefono){
+        this.telefono = telefono;
+    }
+    public int getTelefono(){
+        return telefono;
+    }
+
+    public void SetSalario (double salario){
+        this.salario = salario;
+    }
+    public double getSalario(){
+        return salario;
+    }
+
+}
